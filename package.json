@@ -1,0 +1,35 @@
+{
+  "name": "test-project",
+  "version": "1.0.0",
+  "description": "test",
+  "main": "index.js",
+  "repository": "git@github.com:batmunkh0612/test-project.git",
+  "author": "batmunkh0612 <cypox2017@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "prepare": "npx husky intall",
+    "lint": "npx eslint --ext .ts,.tsx ."
+  },
+  "devDependencies": {
+    "@types/supertest": "^2.0.12",
+    "@typescript-eslint/eslint-plugin": "^5.36.2",
+    "@typescript-eslint/parser": "^5.36.2",
+    "commitizen": "^4.2.5",
+    "cz-conventional-changelog": "3.3.0",
+    "eslint": "^8.23.0",
+    "eslint-plugin-react": "^7.31.7",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-import-resolver-typescript": "^3.3.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "@mui/system": "^5.10.3"
+  }
+}
