@@ -1,0 +1,224 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "This is a simple example NodeJS API project to demonstrate Swagger Documentation",
+    "version": "1.0.0",
+    "title": "Movies API",
+    "contact": {
+      "email": "developers@pinecone.mn"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  },
+  "schemes": ["http"],
+  "host": "localhost:3080",
+  "basePath": "/api",
+  "paths": {
+    "/movies": {
+      "get": {
+        "summary": "Get all the movies",
+        "description": "Get all the movies",
+        "produces": ["application/json"],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/moviesResponse"
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value",
+            "schema": {
+              "$ref": "#/definitions/InvalidResponse"
+            }
+          }
+        }
+      }
+    },
+    "/movie": {
+      "post": {
+        "summary": "Save the movie",
+        "description": "Save the movie",
+        "produces": ["application/json"],
+        "consumes": ["application/json"],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "movie object",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "movie": {
+                  "type": "object",
+                  "$ref": "#/definitions/Movie"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/moviesResponse"
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value",
+            "schema": {
+              "$ref": "#/definitions/InvalidResponse"
+            }
+          }
+        }
+      }
+    },
+    "/movies/{id}": {
+      "put": {
+        "summary": "Update the movies",
+        "description": "Update the movies",
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "movie id that needs to be deleted",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "movie object",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "movie": {
+                  "type": "object",
+                  "$ref": "#/definitions/Movie"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/moviesResponse"
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value",
+            "schema": {
+              "$ref": "#/definitions/InvalidResponse"
+            }
+          }
+        }
+      }
+    },
+    "/movie/{id}": {
+      "delete": {
+        "summary": "Delete the movie",
+        "description": "Delete the movie",
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "movie id that needs to be deleted",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/moviesResponse"
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid status value",
+            "schema": {
+              "$ref": "#/definitions/InvalidResponse"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "moviesResponse": {
+      "type": "object",
+      "properties": {
+        "_id": {
+          "type": "ObjectID"
+        },
+        "title": {
+          "type": "string"
+        },
+        "director": {
+          "type": "string"
+        },
+        "stars": {
+          "type": "number"
+        },
+        "year": {
+          "type": "number"
+        },
+        "createdAt": {
+          "type": "Date"
+        }
+      }
+    },
+    "Movie": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "director": {
+          "type": "string"
+        },
+        "stars": {
+          "type": "number"
+        },
+        "year": {
+          "type": "number"
+        },
+        "createdAt": {
+          "type": "Date"
+        }
+      }
+    },
+    "InvalidResponse": {
+      "type": "object",
+      "properties": {
+        "statusCode": {
+          "type": "string"
+        },
+        "message": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

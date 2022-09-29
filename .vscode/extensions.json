@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "mikestead.dotenv",
+    "wallabyjs.wallaby-vscode",
+    "eamodio.gitlens",
+    "yzhang.markdown-all-in-one",
+    "infeng.vscode-react-typescript",
+    "bradlc.vscode-tailwindcss"
+  ]
+}
