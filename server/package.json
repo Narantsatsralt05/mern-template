@@ -9,7 +9,7 @@
     "start:dev": "export NODE_ENV=development && yarn build && tsnodemon -x 'nodemon dist/src/server.js'",
     "start:test": "export NODE_ENV=test && yarn build && tsnodemon -x 'nodemon dist/src/server.js'",
     "start:prod": "export NODE_ENV=production && build && tsnodemon -x 'nodemon dist/src/server.js'",
-    "serve": "pm2 start dist/src/server.js --watch",
+    "server": "pm2 start dist/src/server.js --watch",
     "build": "export NODE_ENV=production && npx tsc"
   },
   "keywords": [],

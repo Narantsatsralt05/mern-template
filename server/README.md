@@ -1,45 +1,72 @@
-This project is an application skeleton for a typical [Node.js](https://nodejs.org/) web app.
+# MERN Template Server
 
-[![Build Status](https://travis-ci.org/FortechRomania/express-mongo-example-project.svg?branch=master)](https://travis-ci.org/FortechRomania/express-mongo-example-project)
+## Table of Contents
 
-## Getting Started
-To get you started you can simply clone the repository:
+- [MERN Template Server](#mern-template-server)
+  - [Table of Contents](#table-of-contents)
+  - [ℹ️ About](#ℹ️-about)
+  - [🚀 Quick start](#🚀-quick-start)
+  - [📋 Features](#📋-features)
+  - [⚡ Scripts](#⚡-scripts)
+  - [🤝 Contributing](#🤝-contributing)
+  - [🚩 License](#🚩-license)
 
-```
-git clone https://github.com/FortechRomania/express-mongo-example-project
-```
-and install the dependencies
-```
-npm install
-```
+## ℹ️ About
 
-### Prerequisites
-You need git to clone the repository. You can get git from
-[http://git-scm.com/](http://git-scm.com/).
+The main goal of this project is to provide a base template for the generation of a production-ready `Node.js`, `Express` and `Typescript`. The idea is to avoid having to configure all the tools involved in a project every time it is started and thus be able to focus on the definition and implementation of the business logic.
 
-A number of node.js tools is necessary to initialize and test the project. You must have node.js and its package manager (npm) installed. You can get them from  [http://nodejs.org/](http://nodejs.org/). The tools/modules used in this project are listed in package.json and include express, mongodb and mongoose.
+> 📣 This is an opinionated template. The architecture of the code base and the configuration of the different tools used has been based on best practices and personal preferences.
 
-#### MongoDB
-The project uses MongoDB as a database. If you are on Mac and using Homebrew package manager the installation is as simple as `brew install mongodb`.
+## 🚀 Quick start
 
-#### Apidoc
-To install run `npm install apidoc -g`.
+- Start project in development mode:
 
-### Start the MongoDB server
-First we need to create the `db` directory where the database files will live in. In your terminal navigate to the `root` of your system by doing `cd ..` until you reach the top directory. You can create the directory by running `sudo mkdir -p /data/db`. Now open a different tab in your terminal and run `mongod` to start the Mongo server.
+  ```bash
+  npm run start:dev
+  ```
 
-### Run the Application
+- Start project in production mode:
 
-The project is preconfigured with a simple development web server. The simplest way to start this server is:
+  ```bash
+  npm run start:prod
+  ```
 
-    npm start
+- Start project in test mode:
 
-### Generate API documentation
+  > to interact with the API using Swagger UI:
 
-    npm run doc
+  ```bash
+  http://localhost:${ENVIRONMENT_PORT}/api/docs
+  ```
 
-The command will generate a /doc folder that will contain an index.html file. Open it in any browser. The file contains information about API routes.
+## 📋 Features
 
-### Project Structure
+- Built using [Typescript](https://github.com/microsoft/TypeScript)
+- Built using [Express Framework](https://github.com/expressjs/express): Fast, unopinionated, minimalist web framework for node.
+- Unit, Integration and E2E tests using [Jest](https://github.com/facebook/jest)
+- Linting with [ESLint](https://github.com/eslint/eslint)
+- Formatting with [Prettier](https://github.com/prettier/prettier)
+- Git hooks with [Husky](https://github.com/typicode/husky) and [lint-staged](https://github.com/okonet/lint-staged)
+- Containerised using [Docker](https://www.docker.com/) and [Docker Compose](https://docs.docker.com/compose/)
+- Path aliases support
+- Commit messages must meet conventional commits format
 
-*Under Construction*
+## ⚡ Scripts
+
+[package.json](package.json) scripts:
+
+- `test`: Run all tests
+- `start:dev`: Start development environmnet in production mode
+- `start:prod`: Start project in production mode
+- `start:test`: Start test environment in production mode
+- `coverage`: Run tests with coverage
+- `build`: Build project and generate final build
+
+## 🤝 Contributing
+
+Please read [CONTRIBUTING.md](../docs/contribution.md) for details on our code
+of conduct, and the process for submitting pull requests to us.
+
+## 🚩 License
+
+ISC. Please see [License](LICENSE) for more information.
