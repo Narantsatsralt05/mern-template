@@ -5,11 +5,11 @@
 - [MERN Template Server](#mern-template-server)
   - [Table of Contents](#table-of-contents)
   - [ℹ️ About](#ℹ️-about)
-  - [🚀 Quick start](#🚀-quick-start)
-  - [📋 Features](#📋-features)
-  - [⚡ Scripts](#⚡-scripts)
-  - [🤝 Contributing](#🤝-contributing)
-  - [🚩 License](#🚩-license)
+  - [🚀 Quick start](#-quick-start)
+  - [📋 Features](#-features)
+  - [⚡ Scripts](#-scripts)
+  - [🤝 Contributing](#-contributing)
+  - [🚩 License](#-license)
 
 ## ℹ️ About
 
